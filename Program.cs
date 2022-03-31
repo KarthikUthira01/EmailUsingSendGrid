@@ -29,7 +29,7 @@ namespace EmailSendGrid
             //Single From - To Email 
             //var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
             //Single From - Multiple To
-            var msg = MailHelper.CreateSingleEmailToMultipleRecipients(from, emailAddresses, subject, plainTextContent, htmlContent);
+            var msg = MailHelper.CreateSingleEmailToMultipleRecipients(from, emailAddresses, subject, plainTextContent, htmlContent,true);
             var response = await client.SendEmailAsync(msg);
             
         }
